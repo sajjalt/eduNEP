@@ -28,7 +28,7 @@ class Subjects with ChangeNotifier {
         'Chapter 17: Stars and the Solar System',
         'Chapter 18: Pollution of Air and Water',
       ],
-      image: 'img3',
+      image: 'science',
       bgColor: Colors.red[700],
     ),
     Subject(

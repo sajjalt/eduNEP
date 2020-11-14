@@ -58,7 +58,8 @@ class SubjectTile extends StatelessWidget {
               child: Container(
                 height: MediaQuery.of(context).size.height*0.15,
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage('assets/images/${sub.image}.png')),
+                  image: DecorationImage(image: AssetImage('assets/images/${sub.image}.png'),
+                  fit: BoxFit.cover),
 
                 ),
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "700764830549",
+    "firebase_url": "https://edunep-75d45.firebaseio.com",
+    "project_id": "edunep-75d45",
+    "storage_bucket": "edunep-75d45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700764830549:android:b6df37fdfcf55a1c898ddc",
+        "android_client_info": {
+          "package_name": "com.example.eduNEP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700764830549-9cc65vqnsu6124uk8lqp4pn822brrmb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOCzG9jQMNsfxrZrCqriIo7S1CNwwWoSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "700764830549-9cc65vqnsu6124uk8lqp4pn822brrmb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

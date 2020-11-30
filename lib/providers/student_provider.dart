@@ -32,10 +32,10 @@ void updateToken(String token){
 String localID='';
 
 Future<void> getLocalID()async
-{ final url='https://edunep-75d45.firebaseio.com/students.json?auth=$_authToken&orderBy="id"&EqualTo="$_userId"';  
+{ final url='https://edunep-75d45.firebaseio.com/students.json?auth=$_authToken&orderBy="id"&equalTo="$_userId"';  
  final respose= await http.get(url);
 
-  localID=json.decode(respose.body)['name'];
+  localID= localID!=null? localID :json.decode(respose.body)['name'];
 
   print("local ID: $localID");
 
@@ -43,7 +43,7 @@ Future<void> getLocalID()async
 }
 
 Student loggedInStudent()
-{ getLocalID();
+{
 return _studentList.firstWhere((stu) => stu.id==localID);
 }
 
@@ -53,7 +53,8 @@ void update(String token,List<Student> stuList,String uId)
   _authToken=token;
   _studentList=stuList;
 
-  print("\n auth token : ");
+  print("\n auth token : $_authToken");
+  print("\nuser ID : $_userId");
 }
 
 List<Student> get studentsList {
@@ -168,7 +169,7 @@ void updateSubjects(String sub)
 Future<void> updateCurSubs() async {
   print("updating current subjects");
   print(_userId);
-final url='https://edunep-75d45.firebaseio.com/students.json?auth=$_authToken&orderBy="id"&EqualTo="$_userId"';  
+final url='https://edunep-75d45.firebaseio.com/students.json?auth=$_authToken&orderBy="id"&equalTo="$_userId"';  
    await http.patch(url,body:json.encode({
     'curSubjects':curSubs,
     'firstName':"Sajjal",

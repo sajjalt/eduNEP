@@ -362,29 +362,29 @@ class _AuthState extends State<Auth> {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 10, left: 70, right: 70),
-                    child: FlatButton(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 35),
-                      color: Colors.indigo[50],
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30)),
-                      onPressed: () {
-                        Provider.of<Syllabus>(context,listen:false).fetchSyllabus('Class-10');
-                        // Navigator.of(context).pop();
-                        // Navigator.of(context)
-                        //     .pushReplacementNamed(RegisterUser.routeName);
-                      },
-                      child: Text(
-                        "Syllabus",
-                        style: (TextStyle(
-                            fontSize: 22,
-                            color: _mainColor,
-                            fontWeight: FontWeight.bold)),
-                      ),
-                    ),
-                  ),
+                  // Container(
+                  //   margin: EdgeInsets.only(bottom: 10, left: 70, right: 70),
+                  //   child: FlatButton(
+                  //     padding:
+                  //         EdgeInsets.symmetric(vertical: 10, horizontal: 35),
+                  //     color: Colors.indigo[50],
+                  //     shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(30)),
+                  //     onPressed: () {
+                  //       Provider.of<Syllabus>(context,listen:false).fetchSyllabus('Class-10');
+                  //       // Navigator.of(context).pop();
+                  //       // Navigator.of(context)
+                  //       //     .pushReplacementNamed(RegisterUser.routeName);
+                  //     },
+                  //     child: Text(
+                  //       "Syllabus",
+                  //       style: (TextStyle(
+                  //           fontSize: 22,
+                  //           color: _mainColor,
+                  //           fontWeight: FontWeight.bold)),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               )),
         ),

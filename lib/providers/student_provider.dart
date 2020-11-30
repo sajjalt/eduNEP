@@ -37,11 +37,13 @@ Future<void> getLocalID()async
 
   localID=json.decode(respose.body)['name'];
 
+  print("local ID: $localID");
+
 
 }
 
 Student loggedInStudent()
-{
+{ getLocalID();
 return _studentList.firstWhere((stu) => stu.id==localID);
 }
 

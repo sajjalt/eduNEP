@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/subject.dart';
+import '../models/subject.dart';
 
 import '../screen/subject_detail_screen.dart';
 
@@ -10,7 +10,7 @@ class SubjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final sub = Provider.of<Subject>(context);
     void subDetais(){
-      Navigator.of(context).pushNamed(SubjectDetails.routeName,arguments: sub.id);
+      Navigator.of(context).pushNamed(SubjectDetails.routeName,arguments: {'id':sub.id,'std':sub.std});
     }
 
     return Container(
@@ -39,7 +39,9 @@ class SubjectTile extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.indigo[700],
                   fontSize: 15,
+                  fontWeight: FontWeight.bold,
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
@@ -51,6 +53,7 @@ class SubjectTile extends StatelessWidget {
                 color: Colors.white,
                 fontSize: 20,
               ),
+              overflow: TextOverflow.clip,
             ),
             SizedBox(height: 5,),
             Hero(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './subject.dart';
+import '../models/subject.dart';
 
 class Subjects with ChangeNotifier {
   List<Subject> _subList = [
@@ -8,6 +8,7 @@ class Subjects with ChangeNotifier {
       id: 's1',
       title: 'Science',
       chapters: 18,
+      std:'Class-10',
       chapterTitle: [
         'Chapter 1: Crop Production and Management',
         'Chapter 2: Microorganisms Friend and Foe',
@@ -35,6 +36,7 @@ class Subjects with ChangeNotifier {
       id: 's2',
       title: 'Mathematics',
       chapters: 16,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1 Rational Numbers',
         'Chapter 2 Linear Equations in One Variable',
@@ -60,6 +62,7 @@ class Subjects with ChangeNotifier {
       id: 's3',
       title: 'English-A',
       chapters: 10,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1: The Best Christmas Present in the World',
         'Chapter 2: The Tsunami',
@@ -79,6 +82,7 @@ class Subjects with ChangeNotifier {
       id: 's4',
       title: 'English-B',
       chapters: 11,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1: How The Camel Got His Hump',
         'Chapter 2: Children At Work',
@@ -99,6 +103,7 @@ class Subjects with ChangeNotifier {
       id: 's5',
       title: 'History',
       chapters: 10,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1 -How, When & Where?',
         'Chapter 2 -From Trade to Territory',
@@ -118,6 +123,7 @@ class Subjects with ChangeNotifier {
       id: 's6',
       title: 'Civics',
       chapters: 10,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1 – The Indian Constitution',
         'Chapter 2 – Understanding Secularism',
@@ -137,6 +143,7 @@ class Subjects with ChangeNotifier {
       id: 's7',
       title: 'Geography',
       chapters: 6,
+      std: 'Class-10',
       chapterTitle: [
         'Chapter 1 – Resources',
         'Chapter 2 – Natural Vegetation and Wildlife',

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/subject_provider.dart';
+import '../providers/syllabusProvider.dart';
 
 class SubjectDetails extends StatelessWidget {
   static const routeName = '/subjectDetails-Screen';
   @override
   Widget build(BuildContext context) {
-    final subjectId = ModalRoute.of(context).settings.arguments as String;
-    final subject = Provider.of<Subjects>(context).findbyId(subjectId);
+    final curSub = ModalRoute.of(context).settings.arguments as Map<String,String> ;
+    final subject = Provider.of<Syllabus>(context).findbyId(curSub['id'],curSub['std']);
     return Scaffold(
       backgroundColor: Colors.indigo[50],
       appBar: AppBar(

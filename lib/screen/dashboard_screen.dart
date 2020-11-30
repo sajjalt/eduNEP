@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/subject_provider.dart';
+import '../providers/syllabusProvider.dart';
+import '../providers/student_provider.dart';
 
 import '../widgets/subject_tile.dart';
 
@@ -12,10 +13,26 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
+
+  var _isInit=true;
+
+  @override
+  void didChangeDependencies() {
+    if(_isInit)
+    {
+
+      Provider.of<Students>(context).fetchStudents();
+    }
+    _isInit=false;
+        super.didChangeDependencies();
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    final subjectListProvider = Provider.of<Subjects>(context);
-    final subjectList = subjectListProvider.subList;
+    final student=Provider.of<Students>(context).loggedInStudent();
+    final subjectListProvider = Provider.of<Syllabus>(context);
+    final subjectList = subjectListProvider.findByClass(student.curClass);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.indigo[50],
@@ -38,7 +55,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Hello Student",
+                  "Hello ${student.firstName}",
                   style: TextStyle(fontSize: 20, color: Colors.indigo[700]),
                 ),
                 Container(
@@ -75,12 +92,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     child: SubjectTile(),
                   );
                 } ,
-                // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                //   crossAxisCount: 1,
-                //   childAspectRatio: 3 / 1.75,
-                //   mainAxisSpacing: 15,
-                //   crossAxisSpacing: 10,
-                // ),
               ),
             ),
             Container(

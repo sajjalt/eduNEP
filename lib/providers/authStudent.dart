@@ -35,7 +35,7 @@ class AuthStudent with ChangeNotifier {
 
   Future<void> signup(String email, String password) async {
     const url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBOCzG9jQMNsfxrZrCqriIo7S1CNwwWoSM';
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=*****';
     try {
       final response = await http.post(
         url,
